@@ -57,15 +57,15 @@
       },
       {
         "name": "Firebase",
-        "level": 75
+        "level": 85
       },
       {
         "name": "Hive",
-        "level": 60
+        "level": 80
       },
       {
         "name": "SQLite",
-        "level": 60
+        "level": 75
       },
       {
         "name": "Responsive UI",
@@ -85,7 +85,7 @@
       },
       {
         "name": "SOLID Principles",
-        "level": 70
+        "level": 85
       },
       {
         "name": "OOP",
@@ -97,7 +97,7 @@
       },
       {
         "name": "Testing & Debugging",
-        "level": 75
+        "level": 80
       },
       {
         "name": "Problem Solving",
@@ -137,6 +137,60 @@
     }
   ],
   "projects": [
+    {
+      "name": "Imtyaze",
+      "cover_image": "assets/covers/Imtyaze.jpg",
+      "short_description": "A comprehensive e-learning platform tailored for students from high school to university.",
+      "description": "A comprehensive e-learning platform tailored for students ranging from high school to university. The app offers high-quality video courses, secure authentication, advanced video streaming with progress tracking, structured course enrollment, exams & assessments, transaction management, and favorites & personalization. It ensures a smooth and engaging user experience through clean UI, smooth transitions, and offline-ready features. Users can browse content, continue watching, take quizzes, and track their performance.",
+      "features": [
+        "High-quality video courses",
+        "Secure authentication",
+        "Advanced video streaming with progress tracking",
+        "Exams & assessments",
+        "Transaction management",
+        "Favorites & personalization"
+      ],
+      "technologies_used": [
+        "Flutter",
+        "Riverpod",
+        "Hooks",
+        "GoRouter",
+        "Dio",
+        "Clean Architecture",
+        "Cached Network Images",
+        "Responsive Design",
+        "Animations",
+        "Skeleton Loaders",
+        "Video Playback",
+        "SVG Rendering",
+        "Local Storage",
+        "Logger",
+        "Device Preview",
+        "Functional Programming (Dartz)",
+        "Equatable",
+        "WebView",
+        "URL Handling",
+        "Pull-to-Refresh"
+      ],
+      "links": [
+        {
+          "type": "App Store",
+          "url": "https://apps.apple.com/us/app/%D8%A7%D9%85%D8%AA%D9%8A%D8%A7%D8%B2/id6742832357"
+        }
+      ],
+      "media": [
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/Imtyaze/screenshot1.jpg",
+          "note": "Example screenshot path. Add more as needed."
+        },
+        {
+          "type": "demo_video",
+          "url": "assets/screenshots/Imtyaze/demo.mp4",
+          "note": "Example demo video path (can be .mp4 or .gif)."
+        }
+      ]
+    },
     {
       "name": "Tadabar",
       "cover_image": "assets/covers/Tadabar.png",
@@ -189,60 +243,6 @@
           "type": "gif",
           "url": "assets/screenshots/Tadabar/demo.gif",
           "note": "Example GIF path. Add more as needed."
-        }
-      ]
-    },
-    {
-      "name": "Imtyaze",
-      "cover_image": "assets/covers/Imtyaze.jpg",
-      "short_description": "A comprehensive e-learning platform tailored for students from high school to university.",
-      "description": "A comprehensive e-learning platform tailored for students ranging from high school to university. The app offers high-quality video courses, secure authentication, advanced video streaming with progress tracking, structured course enrollment, exams & assessments, transaction management, and favorites & personalization. It ensures a smooth and engaging user experience through clean UI, smooth transitions, and offline-ready features. Users can browse content, continue watching, take quizzes, and track their performance.",
-      "features": [
-        "High-quality video courses",
-        "Secure authentication",
-        "Advanced video streaming with progress tracking",
-        "Exams & assessments",
-        "Transaction management",
-        "Favorites & personalization"
-      ],
-      "technologies_used": [
-        "Flutter",
-        "BLoC",
-        "Provider",
-        "Riverpod",
-        "Dio",
-        "GoRouter",
-        "Video Streaming",
-        "Shared Preferences",
-        "Cached Network Image",
-        "Shimmer",
-        "Custom UI Components",
-        "WebView",
-        "Secure Window Management",
-        "Internationalization"
-      ],
-      "links": [
-        {
-          "type": "ApkPure / App Store",
-          "url": "#",
-          "note": "Please replace with the actual store link."
-        },
-        {
-          "type": "GitHub",
-          "url": "#",
-          "note": "Please replace with the actual GitHub link if available."
-        }
-      ],
-      "media": [
-        {
-          "type": "screenshot",
-          "url": "assets/screenshots/Imtyaze/screenshot1.jpg",
-          "note": "Example screenshot path. Add more as needed."
-        },
-        {
-          "type": "demo_video",
-          "url": "assets/screenshots/Imtyaze/demo.mp4",
-          "note": "Example demo video path (can be .mp4 or .gif)."
         }
       ]
     },
