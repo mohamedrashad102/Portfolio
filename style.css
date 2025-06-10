@@ -279,49 +279,39 @@ body.light-theme .footer-section {
 
 
 /* Global Base Styles */
-/* These styles ensure overall layout and transitions work smoothly across themes */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Crucial for ensuring full page width and preventing horizontal scroll */
 html,
 body {
     width: 100%;
-    /* Ensure both HTML and Body occupy full width */
     height: 100%;
-    /* Ensure both HTML and Body occupy full height */
     margin: 0;
     padding: 0;
 }
 
 html {
     background-color: var(--dark-bg);
-    /* HTML background as fallback for full coverage */
     overflow-x: hidden;
-    /* Crucial for preventing horizontal scroll */
+    /* Prevent horizontal scroll for the entire document */
     scroll-padding-top: 70px;
-    /* Offset for sticky navbar */
     transition: background-color 0.5s ease;
-    /* Smooth HTML background transition */
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     min-height: 100vh;
-    /* Ensures body minimum height is viewport height */
     background-color: var(--dark-bg);
-    /* Default body background */
     color: var(--light-text);
-    /* Default body text color */
     overflow-x: hidden;
-    /* Crucial for preventing horizontal scroll */
+    /* Prevent horizontal scroll for body content */
     scroll-behavior: smooth;
-    /* Smooth scrolling for nav links */
     transition: background-color 0.5s ease, color 0.5s ease;
-    /* Smooth theme transition for body */
 }
 
 .container {
@@ -341,7 +331,6 @@ h2 {
     color: var(--light-text);
     text-shadow: 0 0 10px rgba(var(--primary-color-rgb), 0.3);
     transition: color 0.5s ease, text-shadow 0.5s ease;
-    /* Smooth theme transition */
 }
 
 h2::after {
@@ -355,7 +344,6 @@ h2::after {
     background-color: var(--primary-color);
     border-radius: 3px;
     transition: background-color 0.5s ease;
-    /* Smooth theme transition */
 }
 
 h3 {
@@ -364,7 +352,6 @@ h3 {
     font-weight: 700;
     color: var(--light-text);
     transition: color 0.5s ease;
-    /* Smooth theme transition */
 }
 
 h4 {
@@ -373,7 +360,6 @@ h4 {
     margin-top: 20px;
     margin-bottom: 10px;
     transition: color 0.5s ease;
-    /* Smooth theme transition */
 }
 
 a {
@@ -436,7 +422,6 @@ a:hover {
     color: var(--light-text);
     text-shadow: 0 0 5px rgba(var(--light-text-rgb), 0.2);
     transition: color 0.5s ease, text-shadow 0.5s ease;
-    /* Smooth theme transition */
 }
 
 .nav-links {
@@ -452,7 +437,6 @@ a:hover {
     padding: 5px 0;
     position: relative;
     transition: color 0.5s ease;
-    /* Smooth theme transition */
 }
 
 .nav-links a::after {
@@ -464,7 +448,6 @@ a:hover {
     height: 3px;
     background-color: var(--primary-color);
     transition: width 0.3s ease, background-color 0.5s ease;
-    /* Smooth theme transition */
 }
 
 .nav-links a:hover::after {
@@ -543,7 +526,6 @@ a:hover {
     box-shadow: 0 0 25px rgba(var(--primary-color-rgb), 0.6);
     animation: pulse 2s infinite alternate;
     transition: background 0.5s ease, box-shadow 0.5s ease;
-    /* Smooth transition */
 }
 
 .profile-picture {
@@ -565,7 +547,8 @@ a:hover {
 }
 
 .profile-details-wrapper h1 {
-    font-size: 3.5em;
+    font-size: 2.8em;
+    /* Adjusted: Smaller name */
     margin-bottom: 8px;
     color: var(--light-text);
     font-weight: 800;
@@ -574,7 +557,8 @@ a:hover {
 }
 
 .profile-details-wrapper p {
-    font-size: 1.3em;
+    font-size: 1.15em;
+    /* Adjusted: Smaller title */
     margin-bottom: 30px;
     color: var(--light-text);
     font-weight: 300;
@@ -595,7 +579,6 @@ a:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
     color: white;
-    /* Ensure text is white on hover */
 }
 
 
@@ -658,7 +641,6 @@ a:hover {
     font-weight: 700;
     text-shadow: 0 0 8px rgba(var(--primary-color-rgb), 0.4);
     transition: color 0.5s ease, text-shadow 0.5s ease;
-    /* Smooth theme transition */
 }
 
 /* Technical Skills Progress Bars */
@@ -1300,7 +1282,6 @@ a:hover {
 /* Footer Section */
 .footer-section {
     background-color: #111;
-    /* Default dark footer background */
     padding: 40px 0;
     text-align: center;
     font-size: 1em;
@@ -1322,18 +1303,25 @@ a:hover {
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         padding: 20px 0;
         text-align: center;
-        max-height: 0;
+        /* Using max-content with a fallback high value for mobile menu to fit all links */
+        max-height: max-content;
+        max-height: 500px;
+        /* Fallback/explicit high value */
         overflow: hidden;
         transition: max-height 0.3s ease-out;
     }
 
     .nav-links.active {
         display: flex;
-        max-height: 450px;
+        max-height: max-content;
+        /* Adjust to fit all links */
+        max-height: 500px;
+        /* Fallback for older browsers */
     }
 
     .nav-links li {
-        margin: 12px 0;
+        margin: 8px 0;
+        /* Adjusted: Slightly less margin for mobile links */
     }
 
     .menu-toggle {
@@ -1359,11 +1347,13 @@ a:hover {
     }
 
     .profile-details-wrapper h1 {
-        font-size: 2.8em;
+        font-size: 2.5em;
+        /* Adjusted: Even smaller for mobile */
     }
 
     .profile-details-wrapper p {
-        font-size: 1.15em;
+        font-size: 1.1em;
+        /* Adjusted: Slightly smaller for mobile */
     }
 
     .profile-card .btn {
