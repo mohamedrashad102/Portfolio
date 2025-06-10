@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
 
 :root {
+    /* Dark Theme Colors (Default) */
     --primary-color: #2DD4BF;
     /* Accent Color: Teal-400, for main highlights, buttons, links, etc. */
     --secondary-color: #B0BEC5;
@@ -28,18 +29,266 @@
     /* Button Text: Gray-900 */
     --hover-accent-color: #14B8A6;
     /* Hover Accent: Teal-500 */
+    --deep-hover-color: #0D9488;
+    /* Even darker Teal-600 for hover gradient end */
+
     --skill-bar-empty: rgba(243, 244, 246, 0.1);
     /* Lighter translucent background for empty bar */
     --skill-bar-fill: linear-gradient(to right, var(--primary-color), var(--hover-accent-color));
     /* Gradient fill for bar */
     --primary-color-rgb: 45, 212, 191;
     /* R, G, B values for #2DD4BF for rgba() usage */
+    --dark-bg-rgb: 31, 41, 55;
+    /* RGB for #1F2937 */
+    --light-text-rgb: 243, 244, 246;
+    /* RGB for #F3F4F6 */
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Light Theme Overrides */
+body.light-theme {
+    --primary-color: #10B981;
+    /* Emerald-500: Bright, vibrant green for accents, buttons, and highlights */
+    --secondary-color: #6B7280;
+    /* Gray-500: Neutral gray for secondary text and subtle elements */
+    --accent-color: #10B981;
+    /* Same as primary for consistency */
+    --dark-bg: #F3F4F6;
+    /* Gray-100: Soft, warm light background */
+    --light-text: #111827;
+    /* Gray-900: Dark, high-contrast text for readability */
+    --card-bg: #FFFFFF;
+    /* Pure white for cards and sections to create depth */
+    --border-color: rgba(16, 185, 129, 0.2);
+    /* Subtle emerald border based on primary */
+    --modal-bg: rgba(255, 255, 255, 0.85);
+    /* Slightly translucent white for modals */
+    --gradient-start: #F3F4F6;
+    /* Matches dark-bg for smooth gradients */
+    --gradient-end: #E5E7EB;
+    /* Gray-200: Light gray for gradient contrast */
+    --button-text-dark: #FFFFFF;
+    /* White text for buttons with primary/accent bg */
+    --hover-accent-color: #059669;
+    /* Emerald-600: Darker shade for hover states */
+    --deep-hover-color: #047857;
+    /* Even darker Emerald-700 for hover gradient end */
+
+    --skill-bar-empty: rgba(17, 24, 39, 0.1);
+    /* Subtle dark translucent for empty skill bars */
+    --skill-bar-fill: linear-gradient(to right, var(--primary-color), var(--hover-accent-color));
+    /* Gradient from primary to hover-accent */
+    --primary-color-rgb: 16, 185, 129;
+    /* RGB for #10B981 */
+    --dark-bg-rgb: 243, 244, 246;
+    /* RGB for #F3F4F6 */
+    --light-text-rgb: 17, 24, 39;
+    /* RGB for #111827 */
+
+    color: var(--light-text);
+    /* Ensure body text uses dark, readable color */
+}
+
+/* Specific adjustments for light theme elements */
+body.light-theme .navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .nav-logo {
+    color: var(--light-text);
+    text-shadow: none;
+}
+
+body.light-theme .nav-links a {
+    color: var(--light-text);
+}
+
+body.light-theme .menu-toggle {
+    color: var(--light-text);
+}
+
+body.light-theme h2 {
+    color: var(--light-text);
+    text-shadow: none;
+}
+
+body.light-theme .profile-card {
+    border-color: var(--primary-color);
+}
+
+body.light-theme .profile-image-wrapper {
+    box-shadow: 0 0 25px rgba(var(--primary-color-rgb), 0.6);
+    animation: light-pulse 2s infinite alternate;
+}
+
+@keyframes light-pulse {
+    from {
+        box-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.6), 0 0 30px rgba(var(--primary-color-rgb), 0.4);
+    }
+
+    to {
+        box-shadow: 0 0 25px rgba(var(--primary-color-rgb), 0.8), 0 0 50px rgba(var(--primary-color-rgb), 0.5);
+    }
+}
+
+
+body.light-theme .profile-picture {
+    border-color: var(--card-bg);
+}
+
+body.light-theme .profile-details-wrapper h1 {
+    color: var(--light-text);
+    text-shadow: none;
+}
+
+body.light-theme .profile-details-wrapper p {
+    color: var(--light-text);
+}
+
+body.light-theme .skill-category h3 {
+    color: var(--primary-color);
+    text-shadow: none;
+}
+
+body.light-theme .skills-list li {
+    background: rgba(var(--primary-color-rgb), 0.1);
+    border: 1px solid var(--primary-color);
+    color: var(--light-text);
+}
+
+body.light-theme .skills-list li:hover {
+    color: var(--button-text-dark);
+    /* Ensure text color is dark on hover for light theme */
+    box-shadow: 0 8px 20px rgba(var(--primary-color-rgb), 0.5);
+}
+
+body.light-theme .experience-timeline::before {
+    background: linear-gradient(to bottom, var(--primary-color), var(--hover-accent-color));
+}
+
+body.light-theme .experience-entry-dot {
+    background: linear-gradient(45deg, var(--primary-color), var(--hover-accent-color));
+    border-color: var(--dark-bg);
+    box-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.5);
+}
+
+body.light-theme .experience-content h3 {
+    color: var(--light-text);
+}
+
+body.light-theme .experience-content h4 {
+    color: var(--light-text);
+}
+
+body.light-theme .experience-content li {
+    color: var(--light-text);
+}
+
+body.light-theme .experience-content li::before {
+    color: var(--primary-color);
+}
+
+body.light-theme .project-card-content h3 {
+    color: var(--primary-color);
+}
+
+body.light-theme .education-entry h3,
+body.light-theme .education-entry h4 {
+    color: var(--light-text);
+}
+
+body.light-theme .contact-content {
+    border-color: var(--primary-color);
+}
+
+body.light-theme .contact-content p {
+    color: var(--light-text);
+}
+
+body.light-theme .contact-info-large p {
+    color: var(--light-text);
+}
+
+body.light-theme .contact-info-large .fas {
+    color: var(--primary-color);
+}
+
+body.light-theme .contact-info-large a {
+    color: var(--primary-color);
+}
+
+body.light-theme .contact-info-large a:hover {
+    color: var(--hover-accent-color);
+}
+
+body.light-theme .contact-social-links a {
+    color: var(--light-text);
+}
+
+body.light-theme .contact-social-links a:hover {
+    color: var(--primary-color);
+}
+
+body.light-theme .modal-content-wrapper {
+    border-color: var(--primary-color);
+}
+
+body.light-theme .project-modal-content h3 {
+    color: var(--primary-color);
+}
+
+body.light-theme .project-modal-content p {
+    color: var(--light-text);
+}
+
+body.light-theme .project-modal-content .modal-section h4 {
+    color: var(--light-text);
+}
+
+body.light-theme .project-features li,
+body.light-theme .project-technologies li {
+    background-color: rgba(var(--primary-color-rgb), 0.15);
+    color: var(--light-text);
+}
+
+body.light-theme .project-features li:hover,
+body.light-theme .project-technologies li:hover {
+    background-color: var(--primary-color);
+}
+
+body.light-theme .project-modal-content .project-media-grid img:hover,
+body.light-theme .project-modal-content .project-media-grid video:hover {
+    box-shadow: 0 5px 15px rgba(var(--primary-color-rgb), 0.4);
+}
+
+body.light-theme .close-button {
+    color: var(--light-text);
+}
+
+body.light-theme .close-button:hover,
+body.light-theme .close-button:focus {
+    color: var(--primary-color);
+}
+
+/* Footer background color for light theme */
+body.light-theme .footer-section {
+    background-color: var(--card-bg);
+    color: var(--secondary-color);
+    border-top: 1px solid var(--border-color);
+}
+
+
+/* General Styles (Copied from previous version, ensuring consistency) */
+/* ==================================================================================== */
+
+/* Font Awesome Icon Size */
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab {
+    font-family: "Font Awesome 6 Free";
 }
 
 html {
@@ -65,11 +314,10 @@ h2 {
     text-align: center;
     font-size: 3.2em;
     margin-bottom: 50px;
-    color: var(--light-text);
     position: relative;
     padding-bottom: 15px;
     font-weight: 800;
-    text-shadow: 0 0 10px rgba(45, 212, 191, 0.3);
+    text-shadow: 0 0 10px rgba(var(--primary-color-rgb), 0.3);
 }
 
 h2::after {
@@ -86,7 +334,6 @@ h2::after {
 
 h3 {
     font-size: 1.8em;
-    color: var(--light-text);
     margin-bottom: 15px;
     font-weight: 700;
 }
@@ -137,7 +384,7 @@ a:hover {
     position: sticky;
     top: 0;
     z-index: 999;
-    background-color: rgba(31, 41, 55, 0.98);
+    background-color: rgba(var(--dark-bg-rgb), 0.98);
     backdrop-filter: blur(8px);
     padding: 15px 0;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
@@ -155,7 +402,7 @@ a:hover {
     font-size: 1.9em;
     font-weight: 800;
     color: var(--light-text);
-    text-shadow: 0 0 5px rgba(243, 244, 246, 0.2);
+    text-shadow: 0 0 5px rgba(var(--light-text-rgb), 0.2);
 }
 
 .nav-links {
@@ -187,11 +434,30 @@ a:hover {
     width: 100%;
 }
 
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme-toggle {
+    font-size: 1.8em;
+    cursor: pointer;
+    color: var(--light-text);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--primary-color);
+    transform: rotate(15deg);
+}
+
 .menu-toggle {
-    display: none;
     font-size: 2em;
     cursor: pointer;
     color: var(--light-text);
+    display: none;
+    /* Hidden by default for desktop */
 }
 
 
@@ -235,17 +501,17 @@ a:hover {
     padding: 10px;
     border-radius: 50%;
     background: linear-gradient(45deg, var(--primary-color), var(--hover-accent-color));
-    box-shadow: 0 0 25px rgba(45, 212, 191, 0.6);
+    box-shadow: 0 0 25px rgba(var(--primary-color-rgb), 0.6);
     animation: pulse 2s infinite alternate;
 }
 
 @keyframes pulse {
     from {
-        box-shadow: 0 0 15px rgba(45, 212, 191, 0.6), 0 0 30px rgba(45, 212, 191, 0.4);
+        box-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.6), 0 0 30px rgba(var(--primary-color-rgb), 0.4);
     }
 
     to {
-        box-shadow: 0 0 25px rgba(45, 212, 191, 0.8), 0 0 50px rgba(45, 212, 191, 0.5);
+        box-shadow: 0 0 25px rgba(var(--primary-color-rgb), 0.8), 0 0 50px rgba(var(--primary-color-rgb), 0.5);
     }
 }
 
@@ -273,7 +539,7 @@ a:hover {
     color: var(--light-text);
     font-weight: 800;
     line-height: 1.1;
-    text-shadow: 0 0 15px rgba(243, 244, 246, 0.5);
+    text-shadow: 0 0 15px rgba(var(--light-text-rgb), 0.5);
 }
 
 .profile-details-wrapper p {
@@ -294,9 +560,12 @@ a:hover {
 }
 
 .profile-card .btn:hover {
-    background: linear-gradient(45deg, var(--hover-accent-color), #0D9488);
+    background: linear-gradient(45deg, var(--hover-accent-color), var(--deep-hover-color));
+    /* Using deep-hover-color */
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    color: white;
+    /* Ensure text is white on hover */
 }
 
 
@@ -324,12 +593,9 @@ a:hover {
 
 .skills-grid {
     display: grid;
-    /* This grid now centers the single skill-category */
     grid-template-columns: 1fr;
     justify-items: center;
-    /* Center the single item horizontally */
     gap: 0;
-    /* No gap needed if only one item */
     margin-top: 40px;
 }
 
@@ -342,12 +608,9 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Center content within the card */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
-    /* Ensure it takes full width of its grid column */
     max-width: 900px;
-    /* Limit overall width of the skills card */
 }
 
 .skill-category:hover {
@@ -361,56 +624,19 @@ a:hover {
     color: var(--primary-color);
     font-size: 2.2em;
     font-weight: 700;
-    text-shadow: 0 0 8px rgba(45, 212, 191, 0.4);
+    text-shadow: 0 0 8px rgba(var(--primary-color-rgb), 0.4);
 }
-
-/* Soft Skills List (Removed from HTML, but style if it were to be re-added) */
-/* .soft-skills-category .skills-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    width: 100%;
-    color: var(--light-text);
-}
-
-.soft-skills-category .skills-list li {
-    position: relative;
-    padding-left: 25px;
-    font-size: 1em;
-    text-align: left;
-    background: none;
-    border: none;
-    box-shadow: none;
-    transition: none;
-}
-
-.soft-skills-category .skills-list li::before {
-    content: '\2022';
-    color: var(--primary-color);
-    font-size: 1.2em;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0;
-} */
-
 
 /* Technical Skills Progress Bars - NEW LAYOUT */
 .technical-skills-progress-grid {
     width: 100%;
     display: grid;
-    /* Allows 2-3 skills per row, min 300px per skill */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px 30px;
-    /* Vertical and horizontal gap between skill items */
 }
 
 .skill-progress-item {
     width: 100%;
-    /* No margin-bottom here, controlled by grid gap */
 }
 
 .skill-name-level {
@@ -418,9 +644,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     font-size: 0.95em;
-    /* Slightly smaller font for compactness */
     margin-bottom: 6px;
-    /* Reduced space between text and bar */
     color: var(--light-text);
     font-weight: 600;
 }
@@ -431,20 +655,16 @@ a:hover {
 
 .skill-name-level span:last-child {
     color: var(--primary-color);
-    /* Percentage text color */
     font-weight: 700;
 }
 
 .progress-bar-container {
     background-color: var(--skill-bar-empty);
     border-radius: 8px;
-    /* Slightly less rounded for compactness */
     height: 10px;
-    /* Reduced height of the progress bar */
     overflow: hidden;
     position: relative;
     border: 1px solid rgba(var(--primary-color-rgb), 0.1);
-    /* Subtle border matching primary */
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -453,13 +673,11 @@ a:hover {
     width: 0;
     background: var(--skill-bar-fill);
     border-radius: 8px;
-    /* Match container rounding */
     transition: width 1.5s ease-out;
     position: relative;
     overflow: hidden;
 }
 
-/* Optional: Add glow effect to filled bar */
 .progress-bar-fill::after {
     content: '';
     position: absolute;
@@ -468,7 +686,6 @@ a:hover {
     right: 0;
     bottom: 0;
     background: rgba(255, 255, 255, 0.1);
-    /* Subtle sheen */
     filter: blur(5px);
     opacity: 0.8;
     animation: shine 2s infinite linear;
@@ -567,7 +784,7 @@ a:hover {
     border-radius: 50%;
     border: 4px solid var(--dark-bg);
     z-index: 1;
-    box-shadow: 0 0 15px rgba(45, 212, 191, 0.5);
+    box-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.5);
 }
 
 .experience-content h3 {
@@ -836,9 +1053,12 @@ a:hover {
 }
 
 .btn-contact:hover {
-    background: linear-gradient(45deg, var(--hover-accent-color), #0D9488);
+    background: linear-gradient(45deg, var(--hover-accent-color), var(--deep-hover-color));
+    /* Using deep-hover-color */
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    color: white;
+    /* Ensure text is white on hover */
 }
 
 
@@ -975,7 +1195,7 @@ a:hover {
 
 .project-features li,
 .project-technologies li {
-    background-color: rgba(45, 212, 191, 0.15);
+    background-color: rgba(var(--primary-color-rgb), 0.15);
     color: var(--light-text);
     display: inline-block;
     padding: 8px 15px;
@@ -1031,7 +1251,7 @@ a:hover {
 .project-modal-content .project-media-grid video:hover {
     transform: scale(1.08);
     opacity: 0.9;
-    box-shadow: 0 5px 15px rgba(45, 212, 191, 0.4);
+    box-shadow: 0 5px 15px rgba(var(--primary-color-rgb), 0.4);
 }
 
 /* Footer Section */
@@ -1053,7 +1273,7 @@ a:hover {
         position: absolute;
         top: 65px;
         left: 0;
-        background-color: rgba(31, 41, 55, 0.98);
+        background-color: rgba(var(--dark-bg-rgb), 0.98);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         padding: 20px 0;
         text-align: center;
@@ -1155,7 +1375,6 @@ a:hover {
         font-size: 2em;
     }
 
-    /* Technical skills grid for smaller screens, stack them */
     .technical-skills-progress-grid {
         grid-template-columns: 1fr;
         /* Stack on small screens */

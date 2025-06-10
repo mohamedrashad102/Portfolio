@@ -1,6 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
     let portfolioData = {}; // Global variable to store fetched data
 
+    // --- Theme Toggle Logic ---
+    const themeToggle = document.querySelector('.theme-toggle');
+    const body = document.body;
+
+    // Function to set theme
+    function setTheme(theme) {
+        if (theme === 'light') {
+            body.classList.add('light-theme');
+            themeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+        } else {
+            body.classList.remove('light-theme');
+            themeToggle.querySelector('i').classList.replace('fa-sun', 'fa-moon');
+        }
+        localStorage.setItem('theme', theme); // Save preference
+    }
+
+    // Check saved theme preference on load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else {
+        // Optional: Default to dark theme if no preference found (or check system preference)
+        setTheme('dark');
+        // You could also check system preference:
+        // if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        //     setTheme('light');
+        // } else {
+        //     setTheme('dark');
+        // }
+    }
+
+    // Toggle theme on click
+    themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('light-theme')) {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    });
+    // --- End Theme Toggle Logic ---
+
+
     fetch('data.json')
         .then(response => {
             if (!response.ok) {
@@ -9,10 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(data => {
-            portfolioData = data; // Store data globally
+            portfolioData = data;
             populatePersonalInfo(portfolioData.personal_info);
             populateAboutMe(portfolioData.personal_info.about_me);
-            populateSkills(portfolioData.skills); // This is where the magic happens
+            populateSkills(portfolioData.skills);
             populateExperience(portfolioData.experience);
             populateProjectCards(portfolioData.projects);
             populateEducation(portfolioData.education);
@@ -44,30 +86,24 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('about-me-text').textContent = aboutText;
     }
 
-    // Updated: Populate Skills section with progress bars
     function populateSkills(skills) {
-        // Soft skills will no longer be rendered in this layout.
-        // If you ever want to re-add them, you'd need to put back the HTML structure
-        // and re-implement the soft skills rendering logic here.
-
         const technicalSkillsContainer = document.getElementById('technical-skills-progress-container');
-        technicalSkillsContainer.innerHTML = ''; // Clear existing content
+        technicalSkillsContainer.innerHTML = '';
 
-        // Create Intersection Observer for skill bar animation
         const observerOptions = {
-            root: null, // viewport
+            root: null,
             rootMargin: '0px',
-            threshold: 0.5 // Trigger when 50% of the item is visible
+            threshold: 0.5
         };
 
         const skillObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const progressBar = entry.target.querySelector('.progress-bar-fill');
-                    const level = progressBar.dataset.level; // Get level from data attribute
-                    progressBar.style.width = `${level}%`; // Animate width
-                    progressBar.classList.add('filled'); // Add class for shine animation
-                    observer.unobserve(entry.target); // Stop observing once animated
+                    const level = progressBar.dataset.level;
+                    progressBar.style.width = `${level}%`;
+                    progressBar.classList.add('filled');
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
@@ -86,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
             technicalSkillsContainer.appendChild(skillItemDiv);
-            skillObserver.observe(skillItemDiv); // Observe each skill item
+            skillObserver.observe(skillItemDiv);
         });
     }
 

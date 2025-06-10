@@ -9,7 +9,8 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- AOS Library for Animate On Scroll -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    </script>
 </head>
 
 <body>
@@ -26,8 +27,13 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
+            <div class="navbar-actions"> <!-- New wrapper for actions -->
+                <div class="theme-toggle"> <!-- New theme toggle -->
+                    <i class="fas fa-moon"></i> <!-- Default to moon icon for dark theme -->
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </nav>
@@ -62,10 +68,9 @@
     <section id="skills" class="skills-section">
         <div class="container">
             <h2 data-aos="fade-up">Skills</h2>
-            <!-- Skills grid now only contains the technical skills category -->
             <div class="skills-grid">
                 <div class="skill-category technical-skills-category" data-aos="fade-up" data-aos-delay="100">
-                    <!-- <h3>Technical Skills</h3> -->
+                    <h3>Technical Skills</h3>
                     <div id="technical-skills-progress-container" class="technical-skills-progress-grid">
                         <!-- Technical skill progress bars will be injected here -->
                     </div>
