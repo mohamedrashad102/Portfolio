@@ -1,0 +1,301 @@
+{
+  "personal_info": {
+    "name": "Mohamed Rashad",
+    "title": "Flutter Developer | Cross-Platform Mobile Applications",
+    "profile_image": "assets/profile/profile.jpg",
+    "location": "Zagazig, Al Sharqia, Egypt",
+    "contact": {
+      "phone": "+20 155 576 1846",
+      "email": "mohamedrashadhyg@gmail.com"
+    },
+    "social_links": [
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/mohamedrashad102"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/mohamed-rashad-2bb024288"
+      }
+    ],
+    "cv_download": "assets/downloads/cv.pdf",
+    "about_me": "A Flutter Developer with +2 years of experience building high-performance cross-platform mobile applications. Profi cient in state management, Firebase integration, and applying clean architecture principles. Committed to delivering intuitive user experiences and collaborating effectively to achieve project goals."
+  },
+  "skills": {
+    "soft_skills": [
+      "Collaborative team player with strong communication skills",
+      "Efficient in time management and task prioritization",
+      "Analytical thinker with solid problem-solving abilities",
+      "Adaptable to new technologies and frameworks",
+      "Proactive in identifying and resolving issues",
+      "Detail-oriented with a focus on delivering high-quality code"
+    ],
+    "technical_skills": [
+      {
+        "name": "Flutter",
+        "level": 90
+      },
+      {
+        "name": "Dart",
+        "level": 90
+      },
+      {
+        "name": "Bloc",
+        "level": 80
+      },
+      {
+        "name": "Riverpod",
+        "level": 80
+      },
+      {
+        "name": "Provider",
+        "level": 70
+      },
+      {
+        "name": "RESTful APIs",
+        "level": 85
+      },
+      {
+        "name": "Firebase",
+        "level": 75
+      },
+      {
+        "name": "Hive",
+        "level": 60
+      },
+      {
+        "name": "SQLite",
+        "level": 60
+      },
+      {
+        "name": "Responsive UI",
+        "level": 85
+      },
+      {
+        "name": "Custom Widgets",
+        "level": 80
+      },
+      {
+        "name": "MVVM",
+        "level": 80
+      },
+      {
+        "name": "Clean Architecture",
+        "level": 85
+      },
+      {
+        "name": "SOLID Principles",
+        "level": 70
+      },
+      {
+        "name": "OOP",
+        "level": 80
+      },
+      {
+        "name": "Git",
+        "level": 85
+      },
+      {
+        "name": "Testing & Debugging",
+        "level": 75
+      },
+      {
+        "name": "Problem Solving",
+        "level": 90
+      }
+    ]
+  },
+  "education": [
+    {
+      "degree": "Faculty of Computer Science",
+      "institution": "Zagazig University",
+      "date_range": "2021 - 2025"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Remote Flutter Developer",
+      "company": "ByteForce",
+      "location": "Zagazig, Egypt",
+      "date_range": "October 2024",
+      "description_points": [
+        "Contributed to the development of Imtyaze, an educational platform for online learning.",
+        "Focused on Clean Architecture, Riverpod for state management, and API integration.",
+        "Enhanced UI/UX for a seamless and engaging user experience."
+      ]
+    },
+    {
+      "title": "Summer Trainee",
+      "company": "ITI",
+      "location": "Mansoura, Egypt",
+      "date_range": "August 2023",
+      "description_points": [
+        "Completed intensive training in software development and mobile application design.",
+        "Collaborated with a team to implement an educational Flutter application Sm3ly.",
+        "Focused on MVVM architecture, Firebase integration, and user management with Firebase Authentication."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Tadabar",
+      "cover_image": "assets/covers/Tadabar.png",
+      "short_description": "A cross-platform Islamic application available on Google Play, integrating multiple Islamic services.",
+      "description": "A cross-platform Islamic application available on Google Play, featuring Quran Recitation, Hadith Collections, Azkar, Qibla Direction, Zakat Calculator, and a custom-built Islamic Chatbot. Built with a focus on performance and user-friendly design, it integrates multiple Islamic services in one place, with smooth navigation and an  elegant UI. Supports Light & Dark Mode.",
+      "features": [
+        "Quran Recitation",
+        "Hadith Collections",
+        "Azkar",
+        "Qibla Direction",
+        "Zakat Calculator",
+        "Custom-built Islamic Chatbot",
+        "Light & Dark Mode Support"
+      ],
+      "technologies_used": [
+        "Flutter",
+        "BLoC",
+        "Provider",
+        "Dio",
+        "GoRouter",
+        "Location Services",
+        "Qiblah Direction",
+        "Local Notifications",
+        "Shared Preferences",
+        "Audio Playback",
+        "PDF Viewer",
+        "Custom Animations",
+        "Chatbot Integration",
+        "Light & Dark Themes"
+      ],
+      "links": [
+        {
+          "type": "Google Play",
+          "url": "#",
+          "note": "Please provide the official Google Play link."
+        },
+        {
+          "type": "GitHub",
+          "url": "#",
+          "note": "Please provide the GitHub link if available."
+        }
+      ],
+      "media": [
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/Tadabar/screenshot1.jpg",
+          "note": "Example screenshot path. Add more as needed."
+        },
+        {
+          "type": "gif",
+          "url": "assets/screenshots/Tadabar/demo.gif",
+          "note": "Example GIF path. Add more as needed."
+        }
+      ]
+    },
+    {
+      "name": "Imtyaze",
+      "cover_image": "assets/covers/Imtyaze.jpg",
+      "short_description": "A comprehensive e-learning platform tailored for students from high school to university.",
+      "description": "A comprehensive e-learning platform tailored for students ranging from high school to university. The app offers high-quality video courses, secure authentication, advanced video streaming with progress tracking, structured course enrollment, exams & assessments, transaction management, and favorites & personalization. It ensures a smooth and engaging user experience through clean UI, smooth transitions, and offline-ready features. Users can browse content, continue watching, take quizzes, and track their performance.",
+      "features": [
+        "High-quality video courses",
+        "Secure authentication",
+        "Advanced video streaming with progress tracking",
+        "Exams & assessments",
+        "Transaction management",
+        "Favorites & personalization"
+      ],
+      "technologies_used": [
+        "Flutter",
+        "BLoC",
+        "Provider",
+        "Riverpod",
+        "Dio",
+        "GoRouter",
+        "Video Streaming",
+        "Shared Preferences",
+        "Cached Network Image",
+        "Shimmer",
+        "Custom UI Components",
+        "WebView",
+        "Secure Window Management",
+        "Internationalization"
+      ],
+      "links": [
+        {
+          "type": "ApkPure / App Store",
+          "url": "#",
+          "note": "Please replace with the actual store link."
+        },
+        {
+          "type": "GitHub",
+          "url": "#",
+          "note": "Please replace with the actual GitHub link if available."
+        }
+      ],
+      "media": [
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/Imtyaze/screenshot1.jpg",
+          "note": "Example screenshot path. Add more as needed."
+        },
+        {
+          "type": "demo_video",
+          "url": "assets/screenshots/Imtyaze/demo.mp4",
+          "note": "Example demo video path (can be .mp4 or .gif)."
+        }
+      ]
+    },
+    {
+      "name": "Kidglish",
+      "cover_image": "assets/covers/Kidglish.jpg",
+      "short_description": "A dynamic educational mobile app teaching English to children interactively.",
+      "description": "A dynamic educational mobile app designed to teach English to children interactively. The app leverages speech recognition and text-to-speech technologies to help kids practice pronunciation and improve their language skills in a fun and engaging way. Features include interactive speech-to-text exercises, clear and friendly text-to-speech voice output, drawing and signature capture for handwriting practice, animated visuals with Lottie for enhanced engagement, access to learning materials stored and synced via Firebase, and AI-powered generative features to support adaptive learning. The app prioritizes user-friendly navigation, responsive UI, and real-time feedback to create a rich learning environment for young learners.",
+      "features": [
+        "Interactive speech-to-text exercises",
+        "Clear and friendly text-to-speech voice output",
+        "Drawing and signature capture for handwriting practice",
+        "Animated visuals with Lottie for enhanced engagement",
+        "Access to learning materials stored and synced via Firebase",
+        "AI-powered generative features to support adaptive learning"
+      ],
+      "technologies_used": [
+        "Flutter",
+        "Riverpod",
+        "Hooks",
+        "GoRouter",
+        "Firebase Core",
+        "Firestore",
+        "Text-to-Speech",
+        "Speech-to-Text",
+        "Audio Playback",
+        "SVG Rendering",
+        "Lottie Animations",
+        "Device Preview",
+        "Path Provider",
+        "Google Generative AI",
+        "Signature Capture",
+        "Equatable"
+      ],
+      "links": [
+        {
+          "type": "APK Download",
+          "url": "#",
+          "note": "Please provide the APK download link."
+        }
+      ],
+      "media": [
+        {
+          "type": "demo_video",
+          "url": "assets/screenshots/Kidglish/demo.mp4",
+          "note": "Example demo video path (can be .mp4 or .gif)."
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/Kidglish/screenshot1.jpg",
+          "note": "Example screenshot path. Add more as needed."
+        }
+      ]
+    }
+  ]
+}
