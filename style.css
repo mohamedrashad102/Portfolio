@@ -66,6 +66,7 @@ body.light-theme {
     /* Matches dark-bg for smooth gradients */
     --gradient-end: #E5E7EB;
     /* Gray-200: Light gray for gradient contrast */
+
     --button-text-dark: #FFFFFF;
     /* White text for buttons with primary/accent bg */
     --hover-accent-color: #059669;
@@ -158,7 +159,6 @@ body.light-theme .skills-list li {
 
 body.light-theme .skills-list li:hover {
     color: var(--button-text-dark);
-    /* Ensure text color is dark on hover for light theme */
     box-shadow: 0 8px 20px rgba(var(--primary-color-rgb), 0.5);
 }
 
@@ -278,30 +278,50 @@ body.light-theme .footer-section {
 }
 
 
-/* General Styles (Copied from previous version, ensuring consistency) */
-/* ==================================================================================== */
+/* Global Base Styles */
+/* These styles ensure overall layout and transitions work smoothly across themes */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-/* Font Awesome Icon Size */
-.fa,
-.fas,
-.far,
-.fal,
-.fad,
-.fab {
-    font-family: "Font Awesome 6 Free";
+html,
+body {
+    width: 100%;
+    /* Ensure both HTML and Body occupy full width */
+    height: 100%;
+    /* Ensure both HTML and Body occupy full height */
+    margin: 0;
+    padding: 0;
 }
 
 html {
+    background-color: var(--dark-bg);
+    /* HTML background as fallback for full coverage */
+    overflow-x: hidden;
+    /* Crucial for preventing horizontal scroll */
     scroll-padding-top: 70px;
+    /* Offset for sticky navbar */
+    transition: background-color 0.5s ease;
+    /* Smooth HTML background transition */
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--dark-bg);
-    color: var(--light-text);
     line-height: 1.6;
+    min-height: 100vh;
+    /* Ensures body minimum height is viewport height */
+    background-color: var(--dark-bg);
+    /* Default body background */
+    color: var(--light-text);
+    /* Default body text color */
     overflow-x: hidden;
+    /* Crucial for preventing horizontal scroll */
     scroll-behavior: smooth;
+    /* Smooth scrolling for nav links */
+    transition: background-color 0.5s ease, color 0.5s ease;
+    /* Smooth theme transition for body */
 }
 
 .container {
@@ -310,6 +330,7 @@ body {
     padding: 20px;
 }
 
+/* Headings & Typography */
 h2 {
     text-align: center;
     font-size: 3.2em;
@@ -317,7 +338,10 @@ h2 {
     position: relative;
     padding-bottom: 15px;
     font-weight: 800;
+    color: var(--light-text);
     text-shadow: 0 0 10px rgba(var(--primary-color-rgb), 0.3);
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+    /* Smooth theme transition */
 }
 
 h2::after {
@@ -330,12 +354,17 @@ h2::after {
     height: 5px;
     background-color: var(--primary-color);
     border-radius: 3px;
+    transition: background-color 0.5s ease;
+    /* Smooth theme transition */
 }
 
 h3 {
     font-size: 1.8em;
     margin-bottom: 15px;
     font-weight: 700;
+    color: var(--light-text);
+    transition: color 0.5s ease;
+    /* Smooth theme transition */
 }
 
 h4 {
@@ -343,12 +372,14 @@ h4 {
     color: var(--primary-color);
     margin-top: 20px;
     margin-bottom: 10px;
+    transition: color 0.5s ease;
+    /* Smooth theme transition */
 }
 
 a {
-    color: var(--primary-color);
     text-decoration: none;
     transition: color 0.3s ease, transform 0.2s ease;
+    color: var(--primary-color);
 }
 
 a:hover {
@@ -356,13 +387,14 @@ a:hover {
     transform: translateY(-2px);
 }
 
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 12px 25px;
     border-radius: 8px;
     font-weight: 600;
     text-align: center;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease;
     border: none;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -388,7 +420,7 @@ a:hover {
     backdrop-filter: blur(8px);
     padding: 15px 0;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 .navbar .container {
@@ -403,6 +435,8 @@ a:hover {
     font-weight: 800;
     color: var(--light-text);
     text-shadow: 0 0 5px rgba(var(--light-text-rgb), 0.2);
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+    /* Smooth theme transition */
 }
 
 .nav-links {
@@ -417,6 +451,8 @@ a:hover {
     font-size: 1.15em;
     padding: 5px 0;
     position: relative;
+    transition: color 0.5s ease;
+    /* Smooth theme transition */
 }
 
 .nav-links a::after {
@@ -427,7 +463,8 @@ a:hover {
     width: 0;
     height: 3px;
     background-color: var(--primary-color);
-    transition: width 0.3s ease;
+    transition: width 0.3s ease, background-color 0.5s ease;
+    /* Smooth theme transition */
 }
 
 .nav-links a:hover::after {
@@ -461,9 +498,8 @@ a:hover {
 }
 
 
-/* Header Section (Hero - Profile Layout Improvements) */
+/* Header Section (Hero) */
 .hero-section {
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     padding: 100px 0;
     text-align: center;
     display: flex;
@@ -472,6 +508,8 @@ a:hover {
     min-height: 100vh;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    transition: background 0.5s ease;
 }
 
 .profile-card {
@@ -488,6 +526,7 @@ a:hover {
     text-align: left;
     position: relative;
     z-index: 1;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 .profile-image-wrapper {
@@ -503,16 +542,8 @@ a:hover {
     background: linear-gradient(45deg, var(--primary-color), var(--hover-accent-color));
     box-shadow: 0 0 25px rgba(var(--primary-color-rgb), 0.6);
     animation: pulse 2s infinite alternate;
-}
-
-@keyframes pulse {
-    from {
-        box-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.6), 0 0 30px rgba(var(--primary-color-rgb), 0.4);
-    }
-
-    to {
-        box-shadow: 0 0 25px rgba(var(--primary-color-rgb), 0.8), 0 0 50px rgba(var(--primary-color-rgb), 0.5);
-    }
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+    /* Smooth transition */
 }
 
 .profile-picture {
@@ -521,7 +552,7 @@ a:hover {
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid var(--card-bg);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.5s ease;
 }
 
 .profile-picture:hover {
@@ -561,7 +592,6 @@ a:hover {
 
 .profile-card .btn:hover {
     background: linear-gradient(45deg, var(--hover-accent-color), var(--deep-hover-color));
-    /* Using deep-hover-color */
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
     color: white;
@@ -571,9 +601,10 @@ a:hover {
 
 /* About Me Section */
 .about-section {
-    padding: 80px 0;
+    padding: 100px 0;
     background-color: var(--dark-bg);
     text-align: center;
+    transition: background-color 0.5s ease;
 }
 
 .about-section p {
@@ -585,10 +616,11 @@ a:hover {
 }
 
 
-/* Skills Section - Major UI/UX Improvement for Technical Skills */
+/* Skills Section */
 .skills-section {
-    padding: 80px 0;
+    padding: 100px 0;
     background-color: var(--dark-bg);
+    transition: background-color 0.5s ease;
 }
 
 .skills-grid {
@@ -596,19 +628,19 @@ a:hover {
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 0;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .skill-category {
     background-color: var(--card-bg);
-    padding: 40px;
+    padding: 50px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease, border-color 0.5s ease;
     width: 100%;
     max-width: 900px;
 }
@@ -620,19 +652,21 @@ a:hover {
 
 .skill-category h3 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: var(--primary-color);
-    font-size: 2.2em;
+    font-size: 2.4em;
     font-weight: 700;
     text-shadow: 0 0 8px rgba(var(--primary-color-rgb), 0.4);
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+    /* Smooth theme transition */
 }
 
-/* Technical Skills Progress Bars - NEW LAYOUT */
+/* Technical Skills Progress Bars */
 .technical-skills-progress-grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px 40px;
 }
 
 .skill-progress-item {
@@ -643,8 +677,8 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.95em;
-    margin-bottom: 6px;
+    font-size: 1em;
+    margin-bottom: 8px;
     color: var(--light-text);
     font-weight: 600;
 }
@@ -661,11 +695,12 @@ a:hover {
 .progress-bar-container {
     background-color: var(--skill-bar-empty);
     border-radius: 8px;
-    height: 10px;
+    height: 12px;
     overflow: hidden;
     position: relative;
     border: 1px solid rgba(var(--primary-color-rgb), 0.1);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
 .progress-bar-fill {
@@ -673,7 +708,7 @@ a:hover {
     width: 0;
     background: var(--skill-bar-fill);
     border-radius: 8px;
-    transition: width 1.5s ease-out;
+    transition: width 1.5s ease-out, background 0.5s ease;
     position: relative;
     overflow: hidden;
 }
@@ -710,8 +745,9 @@ a:hover {
 
 /* Experience Section */
 .experience-section {
-    padding: 80px 0;
+    padding: 100px 0;
     background-color: var(--dark-bg);
+    transition: background-color 0.5s ease;
 }
 
 .experience-timeline {
@@ -731,13 +767,14 @@ a:hover {
     background: linear-gradient(to bottom, var(--primary-color), var(--hover-accent-color));
     border-radius: 3px;
     height: 100%;
+    transition: background 0.5s ease;
 }
 
 .experience-entry {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     position: relative;
 }
 
@@ -747,14 +784,14 @@ a:hover {
 
 .experience-content {
     background-color: var(--card-bg);
-    padding: 35px;
+    padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     flex: 1;
     max-width: 45%;
     border: 1px solid var(--border-color);
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease, border-color 0.5s ease;
 }
 
 .experience-content:hover {
@@ -775,16 +812,17 @@ a:hover {
 
 .experience-entry-dot {
     position: absolute;
-    top: 25px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
-    width: 25px;
-    height: 25px;
+    width: 28px;
+    height: 28px;
     background: linear-gradient(45deg, var(--primary-color), var(--hover-accent-color));
     border-radius: 50%;
-    border: 4px solid var(--dark-bg);
+    border: 5px solid var(--dark-bg);
     z-index: 1;
     box-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.5);
+    transition: background 0.5s ease, border-color 0.5s ease;
 }
 
 .experience-content h3 {
@@ -859,14 +897,15 @@ a:hover {
 
 /* Projects Section */
 .projects-section {
-    padding: 80px 0;
+    padding: 100px 0;
     background-color: var(--dark-bg);
+    transition: background-color 0.5s ease;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+    gap: 50px;
 }
 
 .project-card {
@@ -874,7 +913,7 @@ a:hover {
     border-radius: 18px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.5s ease, border-color 0.5s ease;
     border: 1px solid var(--border-color);
     cursor: pointer;
     position: relative;
@@ -916,8 +955,9 @@ a:hover {
 
 /* Education Section */
 .education-section {
-    padding: 80px 0;
+    padding: 100px 0;
     background-color: var(--dark-bg);
+    transition: background-color 0.5s ease;
 }
 
 .education-timeline {
@@ -932,14 +972,14 @@ a:hover {
 
 .education-entry {
     background-color: var(--card-bg);
-    padding: 35px;
+    padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     width: 85%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     border: 1px solid var(--border-color);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease, border-color 0.5s ease;
 }
 
 .education-entry:hover {
@@ -974,9 +1014,10 @@ a:hover {
 
 /* Contact Section */
 .contact-section {
-    padding: 80px 0;
+    padding: 100px 0;
     background-color: var(--dark-bg);
     text-align: center;
+    transition: background-color 0.5s ease;
 }
 
 .contact-content {
@@ -987,7 +1028,7 @@ a:hover {
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
     border: 2px solid var(--primary-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease, border-color 0.5s ease;
 }
 
 .contact-content:hover {
@@ -1054,7 +1095,6 @@ a:hover {
 
 .btn-contact:hover {
     background: linear-gradient(45deg, var(--hover-accent-color), var(--deep-hover-color));
-    /* Using deep-hover-color */
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
     color: white;
@@ -1074,6 +1114,7 @@ a:hover {
     overflow: auto;
     background-color: var(--modal-bg);
     padding-top: 60px;
+    transition: background-color 0.5s ease;
 }
 
 .close-button {
@@ -1133,6 +1174,7 @@ a:hover {
     max-height: 94vh;
     overflow-y: auto;
     border: 2px solid var(--primary-color);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
 @keyframes slideUp {
@@ -1177,6 +1219,7 @@ a:hover {
     background-color: var(--card-bg);
     border-radius: 12px;
     border: 1px solid var(--border-color);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
 .project-modal-content .modal-section h4 {
@@ -1257,11 +1300,13 @@ a:hover {
 /* Footer Section */
 .footer-section {
     background-color: #111;
-    padding: 35px 0;
+    /* Default dark footer background */
+    padding: 40px 0;
     text-align: center;
     font-size: 1em;
     color: var(--secondary-color);
     border-top: 1px solid var(--border-color);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
 /* Responsive Design */
