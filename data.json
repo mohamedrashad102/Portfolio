@@ -139,7 +139,7 @@
   "projects": [
     {
       "name": "Imtyaze",
-      "cover_image": "assets/covers/Imtyaze.jpg",
+      "cover_image": "assets/covers/dummy.png",
       "short_description": "A comprehensive e-learning platform tailored for students from high school to university.",
       "description": "A comprehensive e-learning platform tailored for students ranging from high school to university. The app offers high-quality video courses, secure authentication, advanced video streaming with progress tracking, structured course enrollment, exams & assessments, transaction management, and favorites & personalization. It ensures a smooth and engaging user experience through clean UI, smooth transitions, and offline-ready features. Users can browse content, continue watching, take quizzes, and track their performance.",
       "features": [
@@ -248,7 +248,7 @@
     },
     {
       "name": "Kidglish",
-      "cover_image": "assets/covers/Kidglish.jpg",
+      "cover_image": "assets/covers/dummy.png",
       "short_description": "A dynamic educational mobile app teaching English to children interactively.",
       "description": "A dynamic educational mobile app designed to teach English to children interactively. The app leverages speech recognition and text-to-speech technologies to help kids practice pronunciation and improve their language skills in a fun and engaging way. Features include interactive speech-to-text exercises, clear and friendly text-to-speech voice output, drawing and signature capture for handwriting practice, animated visuals with Lottie for enhanced engagement, access to learning materials stored and synced via Firebase, and AI-powered generative features to support adaptive learning. The app prioritizes user-friendly navigation, responsive UI, and real-time feedback to create a rich learning environment for young learners.",
       "features": [
