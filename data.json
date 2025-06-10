@@ -296,6 +296,127 @@
           "note": "Example screenshot path. Add more as needed."
         }
       ]
+    },
+    {
+      "name": "Bank Dash",
+      "cover_image": "assets/covers/BankDash.png",
+      "short_description": "A modern banking application built with Flutter that provides a complete financial management solution.",
+      "description": "Bank Dash is a modern banking application built with Flutter that provides a complete financial management solution. It offers features like: account overview, transaction history, money transfers, bill payments, and financial analytics, with responsive designs for both mobile and desktop platforms.",
+      "features": [
+        "Account overview",
+        "Transaction history",
+        "Money transfers",
+        "Bill payments",
+        "Financial analytics",
+        "Responsive design (mobile and desktop)"
+      ],
+      "technologies_used": [
+        "Flutter",
+        "cupertino_icons",
+        "device_preview",
+        "expandable_page_view",
+        "fl_chart",
+        "flutter_bloc",
+        "flutter_svg",
+        "gap",
+        "go_router",
+        "intl",
+        "syncfusion_flutter_charts",
+        "syncfusion_localizations",
+        "zoom_widget"
+      ],
+      "links": [
+        {
+          "type": "GitHub",
+          "url": "https://github.com/mohamedrashad102/bank_dash"
+        }
+      ],
+      "media": [
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash1.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash2.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash3.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash4.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash5.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash6.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash7.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash8.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash9.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash10.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash11.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash12.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash13.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash14.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash15.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash16.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash17.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash18.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash19.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash20.png"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/BankDash/BankDash21.png"
+        }
+      ]
     }
   ]
 }
