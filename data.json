@@ -139,9 +139,9 @@
   "projects": [
     {
       "name": "Imtyaze",
-      "cover_image": "assets/covers/dummy.png",
+      "cover_image": "assets/covers/Imtyaze.png",
       "short_description": "A comprehensive e-learning platform tailored for students from high school to university.",
-      "description": "A comprehensive e-learning platform tailored for students ranging from high school to university. The app offers high-quality video courses, secure authentication, advanced video streaming with progress tracking, structured course enrollment, exams & assessments, transaction management, and favorites & personalization. It ensures a smooth and engaging user experience through clean UI, smooth transitions, and offline-ready features. Users can browse content, continue watching, take quizzes, and track their performance.",
+      "description": "A comprehensive e-learning app for high school to university students, offering high-quality video courses, secure login, progress tracking, exams, transactions, and personalized content. With a clean UI and smooth transitions, users can browse, watch, take quizzes, and monitor their performance seamlessly.",
       "features": [
         "High-quality video courses",
         "Secure authentication",
@@ -152,50 +152,45 @@
       ],
       "technologies_used": [
         "Flutter",
-        "Riverpod",
         "Hooks",
+        "Riverpod",
+        "Hooks Riverpod",
         "GoRouter",
+        "Flutter ScreenUtil",
+        "Flutter SVG",
+        "Cached Network Image",
+        "Chewie",
+        "Better Player Plus",
+        "Video Player",
         "Dio",
-        "Clean Architecture",
-        "Cached Network Images",
-        "Responsive Design",
-        "Animations",
-        "Skeleton Loaders",
-        "Video Playback",
-        "SVG Rendering",
-        "Local Storage",
-        "Logger",
-        "Device Preview",
-        "Functional Programming (Dartz)",
         "Equatable",
-        "WebView",
-        "URL Handling",
-        "Pull-to-Refresh"
+        "Intl",
+        "Shared Preferences",
+        "URL Launcher",
+        "WebView Flutter",
+        "Shimmer",
+        "Flutter WindowManager Plus",
+        "Infinite Scroll Pagination",
+        "Package Info Plus",
+        "Share Plus"
       ],
       "links": [
         {
           "type": "App Store",
           "url": "https://apps.apple.com/us/app/%D8%A7%D9%85%D8%AA%D9%8A%D8%A7%D8%B2/id6742832357"
-        }
-      ],
-      "media": [
-        {
-          "type": "screenshot",
-          "url": "assets/screenshots/Imtyaze/screenshot1.jpg",
-          "note": "Example screenshot path. Add more as needed."
         },
         {
-          "type": "demo_video",
-          "url": "assets/screenshots/Imtyaze/demo.mp4",
-          "note": "Example demo video path (can be .mp4 or .gif)."
+          "type": "Google Drive",
+          "url": "https://drive.google.com/drive/folders/1DZfLCFMAJzG_fZdXZlgGEihZ61iqW9gq?usp=sharing"
         }
-      ]
+      ],
+      "media": []
     },
     {
       "name": "Tadabar",
       "cover_image": "assets/covers/Tadabar.png",
       "short_description": "A cross-platform Islamic application available on Google Play, integrating multiple Islamic services.",
-      "description": "A cross-platform Islamic application available on Google Play, featuring Quran Recitation, Hadith Collections, Azkar, Qibla Direction, Zakat Calculator, and a custom-built Islamic Chatbot. Built with a focus on performance and user-friendly design, it integrates multiple Islamic services in one place, with smooth navigation and an  elegant UI. Supports Light & Dark Mode.",
+      "description": "A cross-platform Islamic app on Google Play offering Quran recitation, Hadith, Azkar, Qibla, Zakat calculator, and a custom Islamic chatbot. Designed for performance and ease of use, with smooth navigation, elegant UI, and Light/Dark Mode support.",
       "features": [
         "Quran Recitation",
         "Hadith Collections",
@@ -224,40 +219,24 @@
       "links": [
         {
           "type": "Google Play",
-          "url": "#",
-          "note": "Please provide the official Google Play link."
-        },
-        {
-          "type": "GitHub",
-          "url": "#",
-          "note": "Please provide the GitHub link if available."
+          "url": "https://play.google.com/store/apps/details?id=com.binaryplus.tadabar&pli=1"
         }
       ],
-      "media": [
-        {
-          "type": "screenshot",
-          "url": "assets/screenshots/Tadabar/screenshot1.jpg",
-          "note": "Example screenshot path. Add more as needed."
-        },
-        {
-          "type": "gif",
-          "url": "assets/screenshots/Tadabar/demo.gif",
-          "note": "Example GIF path. Add more as needed."
-        }
-      ]
+      "media": []
     },
     {
       "name": "Kidglish",
-      "cover_image": "assets/covers/dummy.png",
+      "cover_image": "assets/covers/Kidglish.png",
       "short_description": "A dynamic educational mobile app teaching English to children interactively.",
-      "description": "A dynamic educational mobile app designed to teach English to children interactively. The app leverages speech recognition and text-to-speech technologies to help kids practice pronunciation and improve their language skills in a fun and engaging way. Features include interactive speech-to-text exercises, clear and friendly text-to-speech voice output, drawing and signature capture for handwriting practice, animated visuals with Lottie for enhanced engagement, access to learning materials stored and synced via Firebase, and AI-powered generative features to support adaptive learning. The app prioritizes user-friendly navigation, responsive UI, and real-time feedback to create a rich learning environment for young learners.",
+      "description": "An interactive educational app that teaches English to kids using speech recognition, text-to-speech, and engaging visuals. Features include speaking exercises, handwriting practice, Lottie animations, Firebase-synced content, and AI-powered adaptive learning. Designed for a fun experience with real-time feedback and a responsive, kid-friendly UI.",
       "features": [
-        "Interactive speech-to-text exercises",
-        "Clear and friendly text-to-speech voice output",
-        "Drawing and signature capture for handwriting practice",
-        "Animated visuals with Lottie for enhanced engagement",
-        "Access to learning materials stored and synced via Firebase",
-        "AI-powered generative features to support adaptive learning"
+        "Speech-to-text exercises",
+        "Friendly text-to-speech output",
+        "Handwriting practice",
+        "Lottie animations",
+        "Firebase-synced content",
+        "AI-powered adaptive learning",
+        "Interactive games with multiple levels"
       ],
       "technologies_used": [
         "Flutter",
@@ -279,21 +258,78 @@
       ],
       "links": [
         {
-          "type": "APK Download",
-          "url": "#",
-          "note": "Please provide the APK download link."
+          "type": "Google Drive",
+          "url": "https://drive.google.com/drive/folders/1RbTfjFqyUkj7dI1dS9Av4lVHUm5HlxOf?usp=sharing"
         }
       ],
       "media": [
         {
-          "type": "demo_video",
-          "url": "assets/screenshots/Kidglish/demo.mp4",
-          "note": "Example demo video path (can be .mp4 or .gif)."
+          "type": "screenshot",
+          "url": "assets/screenshots/Kidglish/Kidglish1.jpg"
         },
         {
           "type": "screenshot",
-          "url": "assets/screenshots/Kidglish/screenshot1.jpg",
-          "note": "Example screenshot path. Add more as needed."
+          "url": "assets/screenshots/Kidglish/Kidglish2.jpg"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/Kidglish/Kidglish3.jpg"
+        },
+        {
+          "type": "gif",
+          "url": "assets/screenshots/Kidglish/Kidglish4.gif"
+        },
+        {
+          "type": "gif",
+          "url": "assets/screenshots/Kidglish/Kidglish5.gif"
+        },
+        {
+          "type": "gif",
+          "url": "assets/screenshots/Kidglish/Kidglish6.gif"
+        },
+        {
+          "type": "gif",
+          "url": "assets/screenshots/Kidglish/Kidglish7.gif"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/Kidglish/Kidglish8.jpg"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/Kidglish/Kidglish9.jpg"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/Kidglish/Kidglish10.jpg"
+        },
+        {
+          "type": "screenshot",
+          "url": "assets/screenshots/Kidglish/Kidglish11.jpg"
+        },
+        {
+          "type": "gif",
+          "url": "assets/screenshots/Kidglish/Kidglish12.gif"
+        },
+        {
+          "type": "gif",
+          "url": "assets/screenshots/Kidglish/Kidglish13.gif"
+        },
+        {
+          "type": "gif",
+          "url": "assets/screenshots/Kidglish/Kidglish14.gif"
+        },
+        {
+          "type": "gif",
+          "url": "assets/screenshots/Kidglish/Kidglish15.gif"
+        },
+        {
+          "type": "gif",
+          "url": "assets/screenshots/Kidglish/Kidglish16.gif"
+        },
+        {
+          "type": "gif",
+          "url": "assets/screenshots/Kidglish/Kidglish17.gif"
         }
       ]
     },
@@ -312,18 +348,16 @@
       ],
       "technologies_used": [
         "Flutter",
-        "cupertino_icons",
-        "device_preview",
-        "expandable_page_view",
-        "fl_chart",
-        "flutter_bloc",
-        "flutter_svg",
-        "gap",
-        "go_router",
-        "intl",
-        "syncfusion_flutter_charts",
-        "syncfusion_localizations",
-        "zoom_widget"
+        "Bloc",
+        "GoRouter",
+        "Flutter SVG",
+        "Device Preview",
+        "Expandable Page View",
+        "FL Chart",
+        "Syncfusion Charts",
+        "Syncfusion Localizations",
+        "Intl",
+        "Zoom Widget"
       ],
       "links": [
         {
